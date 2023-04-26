@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -3186,30 +3186,31 @@ TextureImporter:
       Carpets 4_30: 1114822283
       Carpets 4_68: 1411585351
       Carpets 4_6: 1741633520
-      Carpets 4_52: 1100795788
+      Carpets 4_108: -206842505
+      Carpets 4_139: -1110769227
       Carpets 4_9: -1446758384
-      Carpets 4_63: -1856509295
+      Carpets 4_52: 1100795788
       Carpets 4_102: 773056769
-      Carpets 4_111: -287011210
+      Carpets 4_63: -1856509295
       Carpets 4_27: 1664253074
-      Carpets 4_142: -1365010100
+      Carpets 4_111: -287011210
       Carpets 4_64: -2000675701
       Carpets 4_85: 110656545
       Carpets 4_89: -1050361902
       Carpets 4_105: 1703403417
+      Carpets 4_142: -1365010100
       Carpets 4_1: -1527288111
       Carpets 4_71: -735769280
-      Carpets 4_96: 1147242659
       Carpets 4_79: 1182763476
-      Carpets 4_84: -3063802
+      Carpets 4_96: 1147242659
       Carpets 4_135: -1161326704
+      Carpets 4_84: -3063802
       Carpets 4_126: 559581292
       Carpets 4_129: -1369990362
       Carpets 4_4: 1045993489
       Carpets 4_119: -1420440322
       Carpets 4_117: -956405028
       Carpets 4_69: -1448575595
-      Carpets 4_108: -206842505
       Carpets 4_118: -1214295054
       Carpets 4_133: -729860132
       Carpets 4_115: -1504754177
@@ -3218,7 +3219,6 @@ TextureImporter:
       Carpets 4_60: -1921663266
       Carpets 4_53: -39745726
       Carpets 4_34: -1231353781
-      Carpets 4_139: -1110769227
       Carpets 4_0: -1336790045
       Carpets 4_16: -1893079922
       Carpets 4_116: -2039251474
