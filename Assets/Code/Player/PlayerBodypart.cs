@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerBodypart : MonoBehaviour
 {
-    [SerializeField] private ItemScriptableObject _equippedItemData;
+    [SerializeField] private ItemData _equippedItemData;
     [SerializeField] private ItemType _itemType;
     private SpriteRenderer _itemDisplaySprite;
 

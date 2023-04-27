@@ -7,6 +7,7 @@ public enum ItemType
     None,
     Head,
     Legs,
+    Shoes,
     Chest,
     Shield,
     Weapon
@@ -30,7 +31,7 @@ public class ItemData : ScriptableObject
     
     [SerializeField] 
     private int _cost;
-    
+
     public Sprite ItemSprite => _sprite;
     public string ItemName => _name;
     public string ItemDescription => _description;

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823ba10460455404b91f5f60ab1f468d, type: 3}
+  m_Name: GoldenShield
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1870276712, guid: 413edb2230d412940b8dba47da756e1f, type: 3}
+  _name: Golden Shield
+  _itemType: 5
+  _description: Heavy and frail, but it looks fancy
+  _cost: 100
