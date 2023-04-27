@@ -13,7 +13,7 @@ public enum ItemType
 }
 
 [CreateAssetMenu(menuName = "ScriptableObjects/ItemData", fileName = "NewItemData")]
-public class ItemScriptableObject : ScriptableObject
+public class ItemData : ScriptableObject
 {
     [SerializeField] 
     private Sprite _sprite;
