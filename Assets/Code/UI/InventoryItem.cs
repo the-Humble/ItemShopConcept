@@ -17,6 +17,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private Transform _parentTransform;
 
     public ItemData CurrentItemData => _itemData;
+    
     private void OnValidate()
     {
         _itemDisplay = GetComponentInChildren<Image>();
@@ -35,6 +36,12 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         _parentTransform = GetComponentInParent<Canvas>().rootCanvas.transform;
     }
 
+    public void Init(ItemData itemData)
+    {
+        _itemData = itemData;
+        EnsureInventoryItem();
+    }
+    
     private void EnsureInventoryItem()
     {
         if (_itemData == null)

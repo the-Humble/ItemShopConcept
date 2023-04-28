@@ -17,11 +17,17 @@ public class PlayerBodypart : MonoBehaviour
         get => _equippedItemData != null;
     }
 
+    public void Init()
+    {
+        if (_equippedItemData != null) _equippedItemData = Instantiate(_equippedItemData);
+        EnsureEquippedItem();
+    }
+    
     public void SetEquippedItemData(ItemData itemData)
     {
         if(_equippedItemData!=null)_equippedItemData.IsEquipped = false;
         _equippedItemData = itemData;
-        _equippedItemData.IsEquipped = true;
+        if(_equippedItemData!=null) _equippedItemData.IsEquipped = true;
         EnsureEquippedItem();
     }
     

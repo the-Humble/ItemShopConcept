@@ -17,5 +17,5 @@ MonoBehaviour:
   _itemType: 6
   _description: A rusty sword you have carried for a long time
   _cost: 5
-  _isEquipped: 0
+  _isEquipped: 1
   _displayOffset: {x: 4, y: 0}

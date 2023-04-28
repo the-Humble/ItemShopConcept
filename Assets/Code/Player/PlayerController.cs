@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterMovement2D))]
@@ -12,9 +13,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
     private Interactor _interactor;
     
-    public delegate void InventoryEvent();
+    public delegate void InputInventoryEvent();
 
-    public event InventoryEvent OnInventoryOpen;
+    public UnityEvent OnInventoryInput;
 
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnInventory()
     {
-        OnInventoryOpen.Invoke();
+        OnInventoryInput.Invoke();
     }
 
     private void Update()

@@ -7,13 +7,14 @@ using UnityEngine.UI;
 [RequireComponent(typeof(GridLayoutGroup))]
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
+    [SerializeField] private ItemDataEvent OnItemUnequipped;
     public virtual void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0)
         {
             InventoryItem item = eventData.pointerDrag.GetComponent<InventoryItem>();
             item.ParentAfterDrag = transform;
-            
+            OnItemUnequipped.Invoke(item.CurrentItemData);
         }
     }
 }
