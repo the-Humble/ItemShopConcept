@@ -1,10 +1,3 @@
-/*
-The End © Copyright 2023
-Author: Jose Ignacio Ferrer Vera
-Collaborators: [Collaborator 1], [Collaborator2]
-ColliderCallbacks : Allows for all collisions of an object to be subscribable events in a separate script to promote single responsibility
-*/
-
 using UnityEngine;
 
 namespace Code.Core

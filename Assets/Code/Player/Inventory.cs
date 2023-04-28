@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private int _gold = 500;
 
-    private void Awake()
+    private void Start()
     {
         Init();
         _itemList.Add(_head.EquippedItemData);
@@ -57,7 +57,7 @@ public class Inventory : MonoBehaviour
     
     public bool TryBuyItem(ItemData itemData)
     {
-        if (itemData.ItemCost >= _gold) return false;
+        if (itemData.ItemCost > _gold) return false;
         _gold -= itemData.ItemCost;
         _itemList.Add(Instantiate(itemData));
         TriggerUpdateEvents();

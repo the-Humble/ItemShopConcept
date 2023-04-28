@@ -11,7 +11,7 @@ public class Shopkeep : MonoBehaviour, IInteractable
     public void Interact(Interactor interactor)
     {
         Inventory inventory = interactor.GetComponent<Player>().PlayerInventory;
-        _shopkeepUI.UpdateItemSlots(inventory);
         _shopkeepUI.ToggleMenuScreen();
+        inventory.TriggerUpdateEvents();
     }
 }
