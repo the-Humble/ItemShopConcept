@@ -2,22 +2,17 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryUI : MonoBehaviour
+public class InventoryUI : MenuScreen
 {
-    [SerializeField] private ItemSlot[] _itemSlots = new ItemSlot[25];
-    
+   
     [SerializeField] private EquippedItemSlot _headSlot;
     [SerializeField] private EquippedItemSlot _chestSlot;
     [SerializeField] private EquippedItemSlot _legSlot;
     [SerializeField] private EquippedItemSlot _shoeSlot;
     [SerializeField] private EquippedItemSlot _shieldSlot;
     [SerializeField] private EquippedItemSlot _weaponSlot;
-    
-    private List<GameObject> _temporaryGO = new List<GameObject>();
 
-    [SerializeField] private GameObject _inventoryItemPrefab;
-
-    public void UpdateItemSlots(Inventory inventory)
+    public override void UpdateItemSlots(Inventory inventory)
     {
         foreach (GameObject go in _temporaryGO)
         {
@@ -71,12 +66,6 @@ public class InventoryUI : MonoBehaviour
             }
             counterList++;
         }
-    }
-
-    public void ToggleInventoryScreen()
-    {
-        gameObject.SetActive(!gameObject.activeInHierarchy);
-        Time.timeScale = gameObject.activeInHierarchy ? 0 : 1;
     }
 
 }

@@ -129,6 +129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemData: {fileID: 0}
   _itemDisplay: {fileID: 5191205125719523389}
+  ParentAfterDrag: {fileID: 0}
+  _imageRectTransform: {fileID: 2159244970510893358}
 --- !u!222 &2148210304801827564
 CanvasRenderer:
   m_ObjectHideFlags: 0

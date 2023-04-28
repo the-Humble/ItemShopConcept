@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 4
   _description: These smell like they haven't been washed in weeks
   _cost: 5
+  _isEquipped: 1
+  _displayOffset: {x: 0, y: 0}

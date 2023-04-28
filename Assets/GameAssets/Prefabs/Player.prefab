@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 1201629407406778906}
   - component: {fileID: 4977749550479536151}
   - component: {fileID: 77032104701331183}
+  - component: {fileID: 5933385399722685935}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -273,7 +274,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInventoryInput:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3398157773551079218}
+        m_TargetAssemblyTypeName: MenuScreen, Assembly-CSharp
+        m_MethodName: ToggleMenuScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 234109556186863779}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: TriggerUpdateEvents
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6941393897776754903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,6 +334,7 @@ MonoBehaviour:
   _weapon: {fileID: 3306717861203195714}
   _itemList: []
   OnUpdateInventory: {fileID: 11400000, guid: 29cde061b77bb1247a62cd9d1881327a, type: 2}
+  OnUpdateGold: {fileID: 0}
   _gold: 500
 --- !u!114 &546219884100127224
 MonoBehaviour:
@@ -446,6 +472,34 @@ MonoBehaviour:
       - m_Target: {fileID: 234109556186863779}
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: UnequipItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5933385399722685935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201629407406778908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e006ec398bb42a043a61b4f9a38f694c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 5cd0fd3d085e99646b198e1186fd8039, type: 2}
+  OnInvoke:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 234109556186863779}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: SellItem
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1920,6 +1974,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5772313799330367354, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772313799330367354, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772313799330367354, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772313799330367354, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772313799330367354, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772313799330367354, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6010794017133745656, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
       propertyPath: m_Name
       value: --PLAYER-UI--
@@ -2008,6 +2086,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6290567423742782519, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290567423742782519, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290567423742782519, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290567423742782519, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290567423742782519, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290567423742782519, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
 --- !u!224 &299270343 stripped
@@ -2015,3 +2117,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6010794017133745657, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
   m_PrefabInstance: {fileID: 6010794017390482750}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3398157773551079218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8953735718059170316, guid: b54a0a7c779c0aa45bab023c3d0ed269, type: 3}
+  m_PrefabInstance: {fileID: 6010794017390482750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de263a4b2b1d3840b10602bbbc1a190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

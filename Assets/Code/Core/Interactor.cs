@@ -20,12 +20,12 @@ public class Interactor : MonoBehaviour
 
     private void OnEnable()
     {
-        _colliderCallbacks.OnTriggerEnterEvent += SetupInteraction;
+        _colliderCallbacks.OnTriggerStayEvent += SetupInteraction;
         _colliderCallbacks.OnTriggerExitEvent += CleanupInteraction;
     }
     private void OnDisable()
     {
-        _colliderCallbacks.OnTriggerEnterEvent -= SetupInteraction;
+        _colliderCallbacks.OnTriggerStayEvent -= SetupInteraction;
         _colliderCallbacks.OnTriggerExitEvent -= CleanupInteraction;
     }
 

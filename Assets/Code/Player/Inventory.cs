@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<ItemData> _itemList;
     
     [SerializeField] private InventoryEvent OnUpdateInventory;
+    [SerializeField] private intEvent OnUpdateGold;
     public List<ItemData> ItemList => _itemList;
     public Dictionary<ItemType, PlayerBodypart> BodyPartsToType => _bodyPartsToType;
 
@@ -41,7 +42,7 @@ public class Inventory : MonoBehaviour
         _bodyPartsToType.Add(ItemType.Shield, _shield);
         _bodyPartsToType.Add(ItemType.Weapon, _weapon);
         
-        OnUpdateInventory.Invoke(this);
+        TriggerUpdateEvents();
     }
 
     public void Init()
@@ -59,7 +60,7 @@ public class Inventory : MonoBehaviour
         if (itemData.ItemCost >= _gold) return false;
         _gold -= itemData.ItemCost;
         _itemList.Add(Instantiate(itemData));
-        TriggerUpdateEvent();
+        TriggerUpdateEvents();
         return true;
     }
 
@@ -68,25 +69,26 @@ public class Inventory : MonoBehaviour
         if(!_itemList.Contains(itemData) || itemData.IsEquipped) return;
         UnequipItem(itemData);
         _bodyPartsToType[itemData.ItemType].SetEquippedItemData(itemData);
-        TriggerUpdateEvent();
+        TriggerUpdateEvents();
     }
 
     public void UnequipItem(ItemData itemData)
     {
         if (!itemData.IsEquipped) return;
         _bodyPartsToType[itemData.ItemType].SetEquippedItemData(null);
-        TriggerUpdateEvent();
+        TriggerUpdateEvents();
     }
 
     public void SellItem(ItemData itemData)
     {
         _gold += itemData.ItemCost;
         _itemList.Remove(itemData);
-        TriggerUpdateEvent();
+        TriggerUpdateEvents();
     }
 
-    public void TriggerUpdateEvent()
+    public void TriggerUpdateEvents()
     {
         OnUpdateInventory.Invoke(this);
+        OnUpdateGold.Invoke(_gold);
     }
 }

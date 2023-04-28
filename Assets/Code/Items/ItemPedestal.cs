@@ -81,8 +81,6 @@ public class ItemPedestal : MonoBehaviour, IInteractable
     {
         _itemDisplay.SetActive(!_isEmpty);
     }
-
-    public string InteractablePrompt { get; }
     public void Interact(Interactor interactor)
     {
         if (IsEmpty) return;
@@ -107,6 +105,7 @@ public class ItemPedestal : MonoBehaviour, IInteractable
         ActiveDisplay = this;
         LeanTween.scale(_canvas, Vector3.one, 0.1f).setEaseOutElastic();
     }
+    
     public void HideUI(Collider2D other)
     {
         if (ActiveDisplay != this) return;

@@ -12,7 +12,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector]
     public Transform ParentAfterDrag;
 
-    private RectTransform _childRectTransform;
+    [SerializeField] private RectTransform _imageRectTransform;
 
     private Transform _parentTransform;
 
@@ -21,16 +21,12 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private void OnValidate()
     {
         _itemDisplay = GetComponentInChildren<Image>();
-        
-        //FIXME: HACKY SOLUTION
-        _childRectTransform = transform.GetChild(0).GetComponentInChildren<RectTransform>();
         EnsureInventoryItem();
     }
 
     private void Awake()
     {
         _itemDisplay = GetComponentInChildren<Image>();
-        _childRectTransform = transform.GetChild(0).GetComponentInChildren<RectTransform>();
         
         //FIXME: Possible hacky solution?
         _parentTransform = GetComponentInParent<Canvas>().rootCanvas.transform;
@@ -48,13 +44,14 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             _itemDisplay.sprite = null;
             _itemDisplay.color = new Color(1, 1, 1, 0);
-            _childRectTransform.localPosition = Vector3.zero;
+            _imageRectTransform.localPosition = Vector3.zero;
             return;
         }
 
         _itemDisplay.color = new Color(1, 1, 1, 1);
         _itemDisplay.sprite = _itemData.ItemSprite;
-        _childRectTransform.localPosition = _itemData.DisplayOffset;
+        
+        _imageRectTransform.localPosition = _itemData.DisplayOffset;
     }
     
     public void OnBeginDrag(PointerEventData eventData)
@@ -67,7 +64,6 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (_itemData == null) return;
         transform.position = eventData.position;
     }
 
