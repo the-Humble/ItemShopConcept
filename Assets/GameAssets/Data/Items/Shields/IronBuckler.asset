@@ -18,3 +18,5 @@ MonoBehaviour:
   _description: Heavier than your standard buckler, but still light enough to allow
     you to efficiently move
   _cost: 60
+  _isEquipped: 0
+  _displayOffset: {x: -3, y: 3}

@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 2
   _description: Your everyday pair of pants
   _cost: 5
+  _isEquipped: 1
+  _displayOffset: {x: 0, y: 3}

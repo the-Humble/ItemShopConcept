@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 2
   _description: These stain easily, but are light and comfy
   _cost: 10
+  _isEquipped: 0
+  _displayOffset: {x: 0, y: 3}

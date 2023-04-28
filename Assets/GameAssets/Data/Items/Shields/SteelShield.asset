@@ -18,3 +18,4 @@ MonoBehaviour:
   _description: A reliable sturdy shield fit for most of your defensive needs
   _cost: 15
   _isEquipped: 0
+  _displayOffset: {x: -3, y: 2}

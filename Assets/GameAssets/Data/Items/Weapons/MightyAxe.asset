@@ -18,3 +18,5 @@ MonoBehaviour:
   _description: A gigantic axe that allows you to cleave through multiple opponents
     at once
   _cost: 100
+  _isEquipped: 0
+  _displayOffset: {x: 3, y: 0}

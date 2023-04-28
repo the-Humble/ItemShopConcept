@@ -1,5 +1,7 @@
 using System;using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
 public enum ItemType
@@ -33,6 +35,9 @@ public class ItemData : ScriptableObject
     private int _cost;
 
     [SerializeField] private bool _isEquipped;
+
+    [SerializeField] private Vector2 _displayOffset;
+    
     public bool IsEquipped { 
         get => _isEquipped;
         set => _isEquipped = value;
@@ -43,4 +48,5 @@ public class ItemData : ScriptableObject
     public string ItemDescription => _description;
     public ItemType ItemType => _itemType;
     public int ItemCost => _cost;
+    public Vector2 DisplayOffset => _displayOffset;
 }

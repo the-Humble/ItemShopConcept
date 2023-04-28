@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 3
   _description: The most basic pair of shoes you have ever seen
   _cost: 5
+  _isEquipped: 1
+  _displayOffset: {x: 0, y: 4}

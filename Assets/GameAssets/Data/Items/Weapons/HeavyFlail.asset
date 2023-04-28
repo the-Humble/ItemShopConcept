@@ -19,3 +19,4 @@ MonoBehaviour:
     to crack it open
   _cost: 70
   _isEquipped: 0
+  _displayOffset: {x: 3, y: 0}

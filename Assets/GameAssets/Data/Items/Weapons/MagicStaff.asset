@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 6
   _description: A powerful staff that shoots fireballs out of its tip
   _cost: 50
+  _isEquipped: 0
+  _displayOffset: {x: 4, y: 0}
