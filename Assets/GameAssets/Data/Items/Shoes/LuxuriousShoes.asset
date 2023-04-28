@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 3
   _description: These black leather shoes are shiny and not at all fit for battle
   _cost: 90
+  _isEquipped: 0
+  _displayOffset: {x: 0, y: 4}

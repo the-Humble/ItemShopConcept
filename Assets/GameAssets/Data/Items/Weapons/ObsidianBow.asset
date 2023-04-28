@@ -18,3 +18,5 @@ MonoBehaviour:
   _description: This bow with magical properties is said to consume the soul of its
     victims
   _cost: 110
+  _isEquipped: 0
+  _displayOffset: {x: 4, y: 0}

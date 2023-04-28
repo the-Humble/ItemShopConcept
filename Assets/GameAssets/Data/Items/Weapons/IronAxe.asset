@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 6
   _description: A hand axe that is reliable and sturdy
   _cost: 30
+  _isEquipped: 0
+  _displayOffset: {x: 3, y: 0}

@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 5
   _description: Heavy and frail, but it looks fancy
   _cost: 100
+  _isEquipped: 0
+  _displayOffset: {x: -2, y: 2}

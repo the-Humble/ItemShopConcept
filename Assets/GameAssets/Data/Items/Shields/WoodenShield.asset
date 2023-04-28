@@ -18,3 +18,5 @@ MonoBehaviour:
   _description: Despite being in the family for a long time, its better if you change
     this shield befoire it breaks on you
   _cost: 5
+  _isEquipped: 1
+  _displayOffset: {x: -3, y: 2}

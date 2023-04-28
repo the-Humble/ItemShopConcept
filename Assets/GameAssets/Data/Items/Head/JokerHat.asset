@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 1
   _description: A hat that says we live in a society
   _cost: 80
+  _isEquipped: 0
+  _displayOffset: {x: 0, y: -2}

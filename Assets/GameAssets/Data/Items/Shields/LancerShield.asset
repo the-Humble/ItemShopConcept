@@ -18,3 +18,5 @@ MonoBehaviour:
   _description: This giant shield looks like it belonged to a member of the royal
     army
   _cost: 40
+  _isEquipped: 0
+  _displayOffset: {x: -3, y: 1}

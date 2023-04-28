@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 3
   _description: These shoes help you run faster than a gazelle!
   _cost: 20
+  _isEquipped: 0
+  _displayOffset: {x: 0, y: 4}

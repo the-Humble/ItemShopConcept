@@ -17,3 +17,5 @@ MonoBehaviour:
   _itemType: 1
   _description: A helmet that belonged to a legendary winged warrior
   _cost: 80
+  _isEquipped: 0
+  _displayOffset: {x: 0, y: -2}
