@@ -14,6 +14,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private PlayerBodypart _shield;
     [SerializeField] private PlayerBodypart _weapon;
     
+    private Dictionary<ItemType,PlayerBodypart> _bodyPartsToType = new Dictionary<ItemType, PlayerBodypart>();
+
     [SerializeField] private List<ItemData> _itemList;
     public List<ItemData> ItemList => _itemList;
 
@@ -29,69 +31,34 @@ public class Inventory : MonoBehaviour
         _itemList.Add(_weapon.EquippedItemData);
         
         _itemList.RemoveAll(item => item == null);
+        
+        _bodyPartsToType.Add(ItemType.Head, _head);
+        _bodyPartsToType.Add(ItemType.Chest, _chest);
+        _bodyPartsToType.Add(ItemType.Legs, _legs);
+        _bodyPartsToType.Add(ItemType.Shoes, _shoes);
+        _bodyPartsToType.Add(ItemType.Shield, _shield);
+        _bodyPartsToType.Add(ItemType.Weapon, _weapon);
     }
 
-    public void TryBuyItem(ItemData itemData)
+    public bool TryBuyItem(ItemData itemData)
     {
-        if (itemData.ItemCost >= _gold) return;
+        if (itemData.ItemCost >= _gold) return false;
         _gold -= itemData.ItemCost;
         _itemList.Add(Instantiate(itemData));
-
+        return true;
     }
 
     public void EquipItem(ItemData itemData)
     {
-        if(!_itemList.Contains(itemData)) return;
-        switch (itemData.ItemType)
-        {
-            case ItemType.Head:
-                _head.SetEquippedItemData(itemData);
-                break;
-            case ItemType.Legs:
-                _legs.SetEquippedItemData(itemData);
-                break;
-            case ItemType.Shoes:
-                _shoes.SetEquippedItemData(itemData);
-                break;
-            case ItemType.Chest:
-                _chest.SetEquippedItemData(itemData);
-                break;
-            case ItemType.Shield:
-                _shield.SetEquippedItemData(itemData);
-                break;
-            case ItemType.Weapon:
-                _weapon.SetEquippedItemData(itemData);
-                break;
-            default:
-                return;
-        }
+        if(!_itemList.Contains(itemData) || itemData.IsEquipped) return;
+        UnequipItem(itemData);
+        _bodyPartsToType[itemData.ItemType].SetEquippedItemData(itemData);
     }
 
-    public void UnequipItem(ItemType itemType)
+    public void UnequipItem(ItemData itemData)
     {
-        switch (itemType)
-        {
-            case ItemType.Head:
-                _head.SetEquippedItemData(null);
-                break;
-            case ItemType.Legs:
-                _legs.SetEquippedItemData(null);
-                break;
-            case ItemType.Shoes:
-                _shoes.SetEquippedItemData(null);
-                break;
-            case ItemType.Chest:
-                _chest.SetEquippedItemData(null);
-                break;
-            case ItemType.Shield:
-                _shield.SetEquippedItemData(null);
-                break;
-            case ItemType.Weapon:
-                _weapon.SetEquippedItemData(null);
-                break;
-            default:
-                return;
-        }
+        if (!itemData.IsEquipped) return;
+        _bodyPartsToType[itemData.ItemType].SetEquippedItemData(null);
     }
 
     public void SellItem(ItemData itemData)
