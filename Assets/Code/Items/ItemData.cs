@@ -31,6 +31,8 @@ public class ItemData : ScriptableObject
     
     [SerializeField] 
     private int _cost;
+    
+    public bool IsEquipped { get; set; }
 
     public Sprite ItemSprite => _sprite;
     public string ItemName => _name;

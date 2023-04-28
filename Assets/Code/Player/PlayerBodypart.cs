@@ -11,10 +11,18 @@ public class PlayerBodypart : MonoBehaviour
 
     [SerializeField] private ItemType _itemType;
     private SpriteRenderer _itemDisplaySprite;
+    
+    public bool HasEquipped
+    {
+        get => _equippedItemData != null;
+    }
 
     public void SetEquippedItemData(ItemData itemData)
     {
-        if (itemData.ItemType != _itemType) return;
+        if (itemData == null)
+        {
+            _equippedItemData.IsEquipped = false;
+        }
         _equippedItemData = itemData;
         EnsureEquippedItem();
     }

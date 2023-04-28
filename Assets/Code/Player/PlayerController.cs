@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     private CharacterMovement2D _characterMovement;
     private Vector2 _moveInput;
     private Interactor _interactor;
+    
+    public delegate void InventoryEvent();
+
+    public event InventoryEvent OnInventoryOpen;
 
     private void Awake()
     {
@@ -26,6 +30,11 @@ public class PlayerController : MonoBehaviour
     public void OnInteract()
     {
         _interactor.TryInteract();
+    }
+
+    public void OnInventory()
+    {
+        OnInventoryOpen.Invoke();
     }
 
     private void Update()
