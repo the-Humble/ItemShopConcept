@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823ba10460455404b91f5f60ab1f468d, type: 3}
   m_Name: ObsidianArmor
   m_EditorClassIdentifier: 
-  _sprite: {fileID: -1841695878, guid: 35f8442db963d134f942d9fcb2438c2e, type: 3}
-  _name: Iron Armor
+  _sprite: {fileID: 1998431854, guid: 35f8442db963d134f942d9fcb2438c2e, type: 3}
+  _name: Obsidian Armor
   _itemType: 4
-  _description: Your basic iron armor set, great for combat environments
-  _cost: 20
+  _description: Armor said to be made from the souls of slain dragons
+  _cost: 250
