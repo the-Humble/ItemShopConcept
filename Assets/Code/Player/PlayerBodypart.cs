@@ -19,11 +19,9 @@ public class PlayerBodypart : MonoBehaviour
 
     public void SetEquippedItemData(ItemData itemData)
     {
-        if (itemData == null)
-        {
-            _equippedItemData.IsEquipped = false;
-        }
+        if(_equippedItemData!=null)_equippedItemData.IsEquipped = false;
         _equippedItemData = itemData;
+        _equippedItemData.IsEquipped = true;
         EnsureEquippedItem();
     }
     
