@@ -7,12 +7,13 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerController))]
 public class Player : MonoBehaviour
 {
-    private Inventory _inventory;
     private PlayerController _playerController;
-    
+
+    public Inventory PlayerInventory { get; private set; }
+
     private void Awake()
     {
-        _inventory = GetComponent<Inventory>();
+        PlayerInventory = GetComponent<Inventory>();
     }
     
     

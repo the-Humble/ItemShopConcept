@@ -31,12 +31,12 @@ public class Inventory : MonoBehaviour
         _itemList.RemoveAll(item => item == null);
     }
 
-    public void TryBuyItem(ItemData itemData)
+    public bool TryBuyItem(ItemData itemData)
     {
-        if (itemData.ItemCost >= _gold) return;
+        if (itemData.ItemCost >= _gold) return false;
         _gold -= itemData.ItemCost;
         _itemList.Add(Instantiate(itemData));
-
+        return true;
     }
 
     public void EquipItem(ItemData itemData)
