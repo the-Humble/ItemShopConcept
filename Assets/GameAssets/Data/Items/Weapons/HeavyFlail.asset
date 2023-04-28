@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sprite: {fileID: 953327521, guid: 0ba6cc18ee563c74db58c485509b5d67, type: 3}
   _name: Heavy Flail
-  _itemType: 0
+  _itemType: 6
   _description: Using this flail is hard, but if you strike something you are bound
     to crack it open
   _cost: 70
+  _isEquipped: 0
