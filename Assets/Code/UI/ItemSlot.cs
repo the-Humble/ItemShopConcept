@@ -14,7 +14,10 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         {
             InventoryItem item = eventData.pointerDrag.GetComponent<InventoryItem>();
             item.ParentAfterDrag = transform;
-            OnItemUnequipped.Invoke(item.CurrentItemData);
+            if (item.CurrentItemData.IsEquipped)
+            {
+                OnItemUnequipped.Invoke(item.CurrentItemData);
+            }
         }
     }
 }
