@@ -108,7 +108,7 @@
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "Keyboard&Mouse;Keyboard",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true

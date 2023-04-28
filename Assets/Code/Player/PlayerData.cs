@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBody : MonoBehaviour
+public class PlayerData : ScriptableObject
 {
-    
+    private Inventory _inventory;
+
 }

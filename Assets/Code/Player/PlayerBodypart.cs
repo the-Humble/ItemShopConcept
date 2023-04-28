@@ -7,9 +7,18 @@ using UnityEngine;
 public class PlayerBodypart : MonoBehaviour
 {
     [SerializeField] private ItemData _equippedItemData;
+    public ItemData EquippedItemData => _equippedItemData;
+
     [SerializeField] private ItemType _itemType;
     private SpriteRenderer _itemDisplaySprite;
 
+    public void SetEquippedItemData(ItemData itemData)
+    {
+        if (itemData.ItemType != _itemType) return;
+        _equippedItemData = itemData;
+        EnsureEquippedItem();
+    }
+    
     private void Awake()
     {
         EnsureEquippedItem();
@@ -24,7 +33,7 @@ public class PlayerBodypart : MonoBehaviour
     {
         _itemDisplaySprite = GetComponent<SpriteRenderer>();
 
-        if (_equippedItemData == null)
+        if (_equippedItemData == null || _equippedItemData.ItemType != _itemType)
         {
             _itemDisplaySprite.sprite = null;
             return;
